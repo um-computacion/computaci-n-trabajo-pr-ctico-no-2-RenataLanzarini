@@ -3,8 +3,7 @@ import re
 def is_palindrome(text):
     """Detecta si una palabra o frase es un palíndromo."""
     cleaned = re.sub(r'[^a-zA-Z0-9]', '', text.lower())
-    return cleaned 
-
+    return cleaned == cleaned[::-1] 
 
 
 if __name__ == "__main__":
