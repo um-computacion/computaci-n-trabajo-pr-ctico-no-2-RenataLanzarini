@@ -1,6 +1,11 @@
+import re
+
 def is_palindrome(text):
     """Detecta si una palabra o frase es un palíndromo."""
-    pass
+    cleaned = re.sub(r'[^a-zA-Z0-9]', '', text.lower())
+    return cleaned 
+
+
 
 if __name__ == "__main__":
     try:
@@ -12,3 +17,5 @@ if __name__ == "__main__":
                 print(f'"{entrada}" no es un palíndromo\n')
     except KeyboardInterrupt:
         print("\nPrograma finalizado.")
+
+
